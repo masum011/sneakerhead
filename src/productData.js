@@ -1,0 +1,58 @@
+export default [
+    {
+      id: 1,
+      title: "Robbie Jones Black Sneakers for Men",
+      price: 369.00,
+      img: "https://www.jiomart.com/images/product/600x750/rvoxnxvmop/robbie-jones-black-sneakers-for-men-product-images-rvoxnxvmop-0-202209031735.jpg",
+      quantity: 1,
+    },
+    {
+      id: 2,
+      title: "Robbie Jones White Sneakers for Men",
+      price: 600.0,
+      img: "https://www.jiomart.com/images/product/600x750/rvpzzh63sc/robbie-jones-white-sneakers-for-men-product-images-rvpzzh63sc-3-202209031736.jpg",
+      quantity: 1,
+    },
+    {
+      id: 3,
+      title: "Robbie Jones Red Sneakers for Men",
+      price: 500.0,
+      img: "https://www.jiomart.com/images/product/600x750/rvkf3ptt2p/robbie-jones-red-sneakers-for-men-product-images-rvkf3ptt2p-2-202209031732.jpg",
+      quantity: 1,
+    },
+    {
+      id: 4,
+      title: "Numenzo Black Sneakers for Men",
+      price: 400.0,
+      img: "https://www.jiomart.com/images/product/600x750/rvwc0rkuba/numenzo-black-sneakers-for-men-product-images-rvwc0rkuba-1-202209051127.jpg",
+      quantity: 1,
+    },
+    {
+      id: 5,
+      title: "Robbie Jones White Sneakers for Men",
+      price: 4000.0,
+      img: "https://www.jiomart.com/images/product/600x750/rvrgzpx6xy/robbie-jones-white-sneakers-for-men-product-images-rvrgzpx6xy-0-202209031733.jpg",
+      quantity: 1,
+    },
+    {
+      id: 5,
+      title: "Robbie Jones White Sneakers for Men",
+      price: 4000.0,
+      img: "https://www.jiomart.com/images/product/600x750/rvrgzpx6xy/robbie-jones-white-sneakers-for-men-product-images-rvrgzpx6xy-0-202209031733.jpg",
+      quantity: 1,
+    },
+    {
+      id: 5,
+      title: "Robbie Jones White Sneakers for Men",
+      price: 4000.0,
+      img: "https://www.jiomart.com/images/product/600x750/rvrgzpx6xy/robbie-jones-white-sneakers-for-men-product-images-rvrgzpx6xy-0-202209031733.jpg",
+      quantity: 1,
+    },
+    {
+      id: 5,
+      title: "Robbie Jones White Sneakers for Men",
+      price: 4000.0,
+      img: "https://www.jiomart.com/images/product/600x750/rvrgzpx6xy/robbie-jones-white-sneakers-for-men-product-images-rvrgzpx6xy-0-202209031733.jpg",
+      quantity: 1,
+    },
+  ];
