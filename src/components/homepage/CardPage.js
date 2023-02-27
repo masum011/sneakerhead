@@ -1,11 +1,17 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import "./server.scss";
+import {React,useEffect} from "react";
+import './server.scss';
+import { useSelector,useDispatch } from "react-redux";
+import { getCardTotal,removeItem,increaseItemQuantity,decreaseItemQuantity } from "../../features/cardSlice";
 function CardPage() {
 
   const {card,totalQuentity,totalPrice}=useSelector((state)=>state.allcard)
 
 console.log("card number of ",card);
+const dispatch=useDispatch();
+useEffect(() => {
+  dispatch(getCardTotal());
+}, [card])
+
 
 
 
@@ -17,13 +23,13 @@ console.log("card number of ",card);
             <div className="col-md-8">
               <div className="card mb-4">
                 <div className="card-header py-3">
-                  <h5 className="mb-0">Cart - 2 items</h5>
+                  <h5 className="mb-0">Cart - {card.length} items</h5>
                 </div>
                 <div className="card-body">
                   {card.map((data)=>{
                       // console.log(data);
                     return(
-                      <div className="row">
+                      <div className="row maincontaner" >
                       <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
                         <div
                           className="bg-image hover-overlay hover-zoom ripple rounded"
@@ -56,17 +62,11 @@ console.log("card number of ",card);
                           className="btn btn-primary btn-sm me-1 mb-2"
                           data-mdb-toggle="tooltip"
                           title="Remove item"
+                          onClick={()=>dispatch(removeItem(data.id))}
                         >
                           <i className="fas fa-trash"></i>
                         </button>
-                        <button
-                          type="button"
-                          className="btn btn-danger btn-sm mb-2"
-                          data-mdb-toggle="tooltip"
-                          title="Move to the wish list"
-                        >
-                          <i className="fas fa-heart"></i>
-                        </button>
+                       
                       </div>
   
                       <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
@@ -76,7 +76,7 @@ console.log("card number of ",card);
                         >
                           <button
                             className="btn btn-primary px-3 me-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            onClick={()=>dispatch(decreaseItemQuantity(data.id))}
                           >
                             <i className="fas fa-minus"></i>
                           </button>
@@ -86,20 +86,21 @@ console.log("card number of ",card);
                               id="form1"
                               min="0"
                               name="quantity"
-                              value="1"
+                              value={data.quantity}
                               type="number"
                               className="form-control"
+                              onChange={()=>null}
                             />
-                            <label className="form-label" for="form1">
+                            <label className="form-label ms-3" for="form1">
                               Quantity
                             </label>
                           </div>
   
                           <button
                             className="btn btn-primary px-3 ms-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            onClick={()=>dispatch(increaseItemQuantity(data.id))}
                           >
-                            <i className="fas fa-plus"></i>
+                            <i className="fas fa-plus" ></i>
                           </button>
                         </div>
   

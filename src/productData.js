@@ -22,7 +22,7 @@ export default [
     },
     {
       id: 4,
-      title: "Numenzo Black Sneakers for Men",
+      title: "Numenzo Black man Sneakers for Men",
       price: 400.0,
       img: "https://www.jiomart.com/images/product/600x750/rvwc0rkuba/numenzo-black-sneakers-for-men-product-images-rvwc0rkuba-1-202209051127.jpg",
       quantity: 1,
