@@ -44,7 +44,10 @@ export const cardSlice = createSlice({
         if (item.id === action.payload) {
           return { ...item, quantity: item.quantity + 1 };
         }
-      });
+        return 0
+      }
+    
+      );
     },
     decreaseItemQuantity: (state, action) => {
       state.card = state.card.map((item) => {
@@ -56,6 +59,7 @@ export const cardSlice = createSlice({
             return item.quantity;
           }
           }
+          return 0
         });
     },
   },

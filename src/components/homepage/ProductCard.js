@@ -1,4 +1,4 @@
-import {React,useState} from "react";
+import {React,useState,useEffect} from "react";
 import {
   MDBCard,
   MDBCardBody,
@@ -12,6 +12,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCard } from "../../features/cardSlice";
+import ImageSlider from "./ImageSlider";
 import Footer from "./Footer";
 import './server.scss';
 
@@ -22,11 +23,11 @@ function ProductCard() {
   const [openRent,setOpentRent]=useState(false);
   const items = useSelector((state) => state.allcard.items);
   const dispat = useDispatch();
-  function selectDay() {
-    console.log('click me')
-  }
+
+
   return (
     <>
+      <ImageSlider/>
       <MDBContainer>
         <MDBRow className="mb-3 ">
           {items.map((item) => {

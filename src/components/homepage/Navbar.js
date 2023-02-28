@@ -1,9 +1,10 @@
-import {React,useEffect,useState} from 'react';
+import {React,useEffect,useState,useRef} from 'react';
 import  {Link} from 'react-router-dom';
 import user from './img/user.png';
 import sell from './img/sell.png';
 import help from './img/question.png';
 import logout from './img/log-out.png';
+import './server.scss';
 import {
   MDBContainer,
   MDBNavbar,
@@ -21,6 +22,7 @@ var loginAvtar="https://spng.pngfind.com/pngs/s/5-52097_avatar-png-pic-vector-av
       dispatch(getCardTotal());
 
   },[card]);
+// menu bar user
 
 
   return (
@@ -33,12 +35,12 @@ var loginAvtar="https://spng.pngfind.com/pngs/s/5-52097_avatar-png-pic-vector-av
         <MDBBtn color='light' className='cartContaner'>
         <Link to="/card"><i class="fas fa-shopping-cart"></i> {totalQuentity}</Link>
       </MDBBtn>
-      <i style={{fontSize:"1.3rem"}} class="fas fa-user-alt fa-4x" onClick={()=>{ 
+      <i style={{fontSize:"1.3rem"}} className="fas fa-user-alt fa-4x hover-overlay hover-zoom hover-shadow ripple" onClick={()=>{ 
         setOpenMenu(!openMenu)
       }}>  
       </i>
       {
-      openMenu&&  <div className='userContaner'>
+      openMenu&&  <div className='userContaner shadow-custom  '>
 
       <h3><img style={{height:"6rem"}} src={loginAvtar} alt="" /><br/><span>developer</span></h3>
           <ul>
@@ -63,7 +65,8 @@ var loginAvtar="https://spng.pngfind.com/pngs/s/5-52097_avatar-png-pic-vector-av
             </Link>
           </ul>
 
-      </div>}
+      </div>
+      }
     
     {/* <Profile/> */}
       </MDBContainer>
